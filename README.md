@@ -1,77 +1,73 @@
-# AI-期中報告
+# AI-期末報告
 組員:11224142 陳政佑 11225041 許帛勳 
 
-1.登入GoogleDriver
+Colaboratory
+Colaboratory 是一個免費的 Jupyter 筆記本環境，不需要進行任何設定就可以使用，並且完全在雲端運行。借助 Colaboratory，我們可以在瀏覽器中編寫和執行程式碼、保存和共享分析結果，以及利用強大的運算資源，包含 GPU 與 TPU 來運行我們的實驗程式碼。
 
-2.安装Colaboratory插件,並新建Colaborator,如下圖
+Colab 能夠輕鬆地與 Google Driver 與 Github 鏈接，我們可以使用 Open in Colab 插件快速打開 Github 上的 Notebook，或者使用類似於 https://colab.research.google... 這樣的鏈接打開。如果需要將 Notebook 儲存回 Github，直接使用 File→Save a copy to GitHub 即可。譬如筆者所有與 Colab 相關的程式碼歸置在了 AIDL-Workbench/colab。
 
-右鍵我的雲端硬碟—>選擇更多—>選擇關聯更多應用程式—>搜尋Colaborator插件並安裝。
+依賴安裝
 
-![image](https://github.com/user-attachments/assets/2b37f994-4224-4d14-97e9-df472fffe09f)
+Colab 提供了便捷的依赖安装功能，允许使用 pip 或者 apt-get 命令进行安装：
+![image](https://github.com/user-attachments/assets/c62129f0-9625-4ae7-a3b9-6582b1a4733b)
 
-新建Google插件
+在 Colab 中还可以设置环境变量：
 
-![image](https://github.com/user-attachments/assets/60a8e768-e04a-4826-a2b1-534d7afa6ac6)
-
-![image](https://github.com/user-attachments/assets/64d5d2e8-8f23-4a1e-924d-ae89ec8412f3)
-
-連接Google drive
-
-首先在儲存格中輸入並執行下列命令
-
-會出現2次校驗,詳細信息
-
-![image](https://github.com/user-attachments/assets/3a707097-9af6-4e2c-9de8-493f86be8175)
+![image](https://github.com/user-attachments/assets/8a7f7901-17b7-4de8-8073-aac3d33c4554)
 
 
-然後輸入並執行執行以下指令：
 
-![image](https://github.com/user-attachments/assets/85cb566b-cbc8-4659-98df-fa63af0f0b46)
+硬件加速
 
-輸入ls指令，若drive資料夾已列出則說明連接成功
+我们可以通过如下方式查看 Colab 为我们提供的硬件：
 
-![image](https://github.com/user-attachments/assets/dbaea5dd-ccb1-4ed5-b3f8-bff9911ee8b8)
+![image](https://github.com/user-attachments/assets/2fa81552-1033-4893-b889-8a8e1f773111)
 
-查看GPU、CPU狀況,查看GPU是否在colab中
+如果需要为 Notebook 启动 GPU 支持：Click Edit->notebook settings->hardware accelerator->GPU，然后在代码中判断是否有可用的 GPU 设备：
 
-![image](https://github.com/user-attachments/assets/bcac11bc-dc3d-4450-9fbf-bb0c9d5c0a1c)
 
-如果結果為空，則不能使用GPU，如果結果為/device:GPU:0
+![image](https://github.com/user-attachments/assets/52536730-0c21-4fe2-b39c-e97245e80130)
 
- 使用!/opt/bin/nvidia-smi查看顯存狀況
 
- ![image](https://github.com/user-attachments/assets/af165649-e24f-4bec-8b52-e3c98f6d145a)
+我们可以通过构建经典的 CNN 卷积层来比较 GPU 与 CPU 在运算上的差异：
 
-查看顯示卡記憶體使用上限
+![image](https://github.com/user-attachments/assets/c87ac932-9125-4920-80da-b8309b769b19)
 
-![image](https://github.com/user-attachments/assets/3b7539e5-33d3-4438-80be-686bb3579890)
+本地运行
 
-clolab筆電的使用
 
-install
+Colab 还支持直接将 Notebook 连接到本地的 Jupyter 服务器以运行，首先需要启用 jupyter_http_over_ws 扩展程序：
 
-![image](https://github.com/user-attachments/assets/63ebebf2-2760-4ac1-95e0-140249caccf4)
+![image](https://github.com/user-attachments/assets/0d8f455c-f1f4-4e47-a58e-ac313b9493a2)
 
-uninstall
+然后在正常方式启动 Jupyter 服务器，设置一个标记来明确表明信任来自 Colaboratory 前端的 WebSocket 连接：
 
-![image](https://github.com/user-attachments/assets/204986ae-f10f-416e-80ec-0ad9735c2775)
+![image](https://github.com/user-attachments/assets/24799027-6723-4f8a-beaf-36b51e0e3df6)
 
-改變目錄
+然后在 Colab 的 Notebook 中选择连接到本地代码执行程序即可。
 
-![image](https://github.com/user-attachments/assets/36a86008-1f4b-45cb-bba5-20e75a109afb)
+数据与外部模块
 
-git clone
+Colab 中的 notebook 和 py 文件默认都是以 /content/ 作为工作目录，需要执行一下命令手动切换工作目录，例如：
 
-![image](https://github.com/user-attachments/assets/9612383a-52b7-4d38-b823-1b54104b576c)
+![image](https://github.com/user-attachments/assets/6e5958f9-7c36-49bd-ac9f-ec194ea417b8)
 
-下載數據
+Google Driver
 
-![image](https://github.com/user-attachments/assets/134b6623-4176-4baa-be09-851231a3872e)
+在过去进行实验的时候，大量训练与测试数据的获取、存储与加载一直是令人头疼的问题；在 Colab 中，笔者将 Awesome DataSets https://url.wx-coder.cn/FqwyP) 中的相关数据通过 AIDL-Workbench/datasets 中的脚本持久化存储在 Google Driver 中。
 
-查看內存訊息
+在 Colab 中我们可以将 Google Driver 挂载到当的工作路径：
 
-![image](https://github.com/user-attachments/assets/ea0cdeec-253c-491d-9e26-ca57df298ab7)
+![image](https://github.com/user-attachments/assets/a708227a-28ca-418a-bfc6-52c5fdf6de63)
 
-查看GPU訊息
+然后通过正常的 Linux Shell 命令来创建与操作：
 
-![image](https://github.com/user-attachments/assets/ba183bb2-87f0-42e0-b093-5052da25679d)
+![image](https://github.com/user-attachments/assets/4141a628-e0fd-432f-86a4-7e13ab1c986f)
+
+外部 Python 文件
+
+Colab 允许我们上传 Python 文件到工作目录下，或者加载 Google Driver 中的 Python：
+
+
+
+
