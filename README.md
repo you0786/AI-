@@ -68,6 +68,39 @@ Google Driver
 
 Colab 允许我们上传 Python 文件到工作目录下，或者加载 Google Driver 中的 Python：
 
+![image](https://github.com/user-attachments/assets/5fe5cee4-8688-4d82-b7c9-85b0ec04f181)
 
+文件上传与下载
+
+Colab 还允许我们在运行脚本时候直接从本地文件上传，或者将生成的模型下载到本地文件：
+
+![image](https://github.com/user-attachments/assets/2d1ff05d-da92-4014-9369-4471011edfe1)
+
+BigQuery
+
+如果我们使用了 BigQuery 提供了大数据的查询与管理功能，那么在 Colab 中也可以直接引入 BigQuery 中的数据源：
+
+![image](https://github.com/user-attachments/assets/a2b7c1ad-3371-4062-8376-07fa01b4a8c3)
+
+控件使用
+
+网格
+
+Colab 为我们提供了 Grid 以及 Tab 控件，来便于我们构建简单的图表布局：
+
+![image](https://github.com/user-attachments/assets/46d968b2-edb1-4587-aa1a-5421caaadfeb)
+
+![image](https://github.com/user-attachments/assets/85004cb3-d0dd-4c5e-8726-fe424b566145)
+
+TabBar 提供了页签化的布局：
+
+![image](https://github.com/user-attachments/assets/6debe08e-ca85-4312-83c5-0d2a678a8ba6)
+
+![image](https://github.com/user-attachments/assets/528e3130-b4af-44a6-a6bf-2d987a416202)
+
+表单
+值得称道的是，Colab 还提供了可交互的表单式组件，来方便我们构建可动态输入的应用：
+
+![image](https://github.com/user-attachments/assets/9601bbc2-ea45-4207-bf85-0561989fab79)
 
 
