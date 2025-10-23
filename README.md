@@ -3,7 +3,7 @@
 
 1.介紹
 
-Google Colab提供的是免費Tesla K80 GPU，可以玩Keras、Tensorflow、PyTorch或Mxnet等。 Tesla K80還是一塊比較高性能的GPU。主要是免費，免費，免費！ ！ ！ 好像這次真的薅資本主義羊毛了，個人試了幾天，感覺還不錯。剛入手的時候稍微有點麻煩，大部分的網上教程都是在Colab 上手動寫代碼玩玩兒，但是我是自己在本地寫出了一個小的
+Google Colab提供的是免費Tesla K80 GPU，可以玩Keras、Tensorflow、PyTorch或Mxnet等。 Tesla K80還是一塊比較高性能的GPU。主要是免費，免費，免費！個人試了幾天，感覺還不錯。剛入手的時候稍微有點麻煩，大部分的網上教程都是在Colab 上手動寫代碼玩玩兒，但是我是自己在本地寫出了一個小的項目
 
 2.準備工作
 
